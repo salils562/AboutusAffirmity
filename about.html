@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="moving.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -27,7 +28,7 @@
         </div>
         <div class="cont-2" id="cont-2-content">
             <div class="cont-2-block" style="margin-bottom: 2rem;">
-                <h2 style="margin-bottom:1.5rem; font-size: 2.1rem;">We've come a long way.</h2>
+                <h2 style="margin-bottom:1.5rem; font-size: 2.1rem; font-weight: 400;">We've come a long way.</h2>
                 <p>We began life in 2001 as a small, self-funded team of technology specialists. Since then, we’ve grown
                     our organization to over 14,500 people, across 48 offices, in 19 countries, in key global markets.
                 </p>
@@ -220,39 +221,22 @@
             <h1>Awards</h1>
             <p>Our commitment to innovation, excellence in all we do, and maintaining a collaborative and supportive work environment has earned us a variety of prestigious business awards.</p>
         </div>
-            <div class="accordion-cont-7">
-            <img src="images/award.png" class="slides" alt="this is img">
-            <img src="images/award2.jpg" class="slides" alt="this is image">
-            <img src="images/award3.jpg" class="slides" alt="this is image">
-            <img src="images/award4.png" class="slides" alt="this is image">
-            <img src="images/award5.jpg" class="slides" alt="this is image">
-            <img src="images/award6.png" class="slides" alt="this is image">
-            <img src="images/award7.png" class="slides" alt="this is image">
-        </div>
+        <div class="logos">
+            <div class="logos-slide">
+              <img src="images/award.png" />
+              <img src="images/award2.jpg" />
+              <img src="images/award3.jpg" />
+              <img src="images/award4.png" />
+              <img src="images/award5.jpg" />
+              <img src="images/award6.png" />
+              <img src="images/award7.png" />
+            </div>
+          </div>
     </section>
 </body>
-<script>
-    let counter=0;
-    let slides=document.querySelectorAll('.slides');
-    slides.forEach((element,index)=>{
-       element.style.left=`${index*20}rem`;
-    });
-    function previous(){
-        if(counter>-2){
-            counter--;
-            makeSlide()
-        }
-    }
-    function forward(){
-        if(counter<0){
-            counter++;
-            makeSlide()
-        }
-    }
-    let makeSlide=()=>{
-        slides.forEach((element)=>{
-         element.style.transform=`translateX(${counter*30}rem)`;
-        });
-    }
-</script>
+          <script>
+            var copy = document.querySelector(".logos-slide").cloneNode(true);
+            document.querySelector(".logos").appendChild(copy);
+          </script>
+
 </html>
