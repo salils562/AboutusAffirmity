@@ -19,7 +19,7 @@ section {
 .container {
     margin: auto;
     padding-left: 4rem;
-    padding-right: 4rem;
+   padding-right: 4rem;
 }
 
 .text {
@@ -220,13 +220,15 @@ section {
     align-items: center;
 }
 
-.container-4 h1 {
+#cont-4-1 h1 {
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 44px;
+    font-weight: 600;
 }
 
-.container-4 p {
-    font-size: 1.2rem;
+#cont-4-1 p {
+    font-size: 19px;
+    font-weight: 500;
 }
 
 #cont-4-1 {
@@ -850,6 +852,19 @@ border-radius: 5px;
 
 }
 @media only screen and (max-width:484px){
+    #cont-4-1 h1 {
+        margin-bottom: 20px;
+        font-size: 44px;
+        font-weight: 600;
+    }
+    
+    #cont-4-1 p {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    #cont-4-1{
+        width: 85%;
+    }
     #cont-csr-relative{
         margin-top: 15rem;
         margin-bottom: 15rem;
